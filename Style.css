@@ -4,6 +4,7 @@
     "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
+  box-sizing: border-box;
 }
 
 main {
@@ -15,4 +16,46 @@ img {
 }
 .slideshow-container {
   text-align: center;
+}
+.prev,
+.nxt {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.nxt {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover */
+.prev:hover,
+.nxt:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.move {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  text-align: center;
+}
+
+.active,
+.move:hover {
+  background-color: #717171;
 }
